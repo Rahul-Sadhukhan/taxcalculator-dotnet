@@ -1,0 +1,57 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       [dbo].[Country]
+       [dbo].[TaxBracketLine]
+       [dbo].[TaxCalculation]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Country].[PkCountryId] is being dropped, data loss could occur.
+       The column [dbo].[Country].[TaxRegime] is being dropped, data loss could occur.
+       The column [dbo].[Country].[TaxRegimeId] on table [dbo].[Country] must be added, but the column has no default value and
+         does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+       The column [dbo].[TaxBracketLine].[FkTaxBracketId] is being dropped, data loss could occur.
+       The column [dbo].[TaxBracketLine].[CountryId] on table [dbo].[TaxBracketLine] must be added, but the column has no
+         default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this
+         issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of
+         smart-defaults as a deployment option.
+       The column [dbo].[TaxCalculation].[FkCountryId] is being dropped, data loss could occur.
+       The column [dbo].[TaxCalculation].[PkTaxCalculationId] is being dropped, data loss could occur.
+       The column [dbo].[TaxCalculation].[CountryId] on table [dbo].[TaxCalculation] must be added, but the column has no
+         default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this
+         issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of
+         smart-defaults as a deployment option.
+
+** User actions
+     Drop
+       [dbo].[FK_TaxBracket_Country] (Foreign Key)
+       [dbo].[FK_TaxCalculation_Country] (Foreign Key)
+       [dbo].[FK_TaxRate_Country] (Foreign Key)
+       [dbo].[FK_TaxBracketLine_TaxBracket] (Foreign Key)
+     Recreate table
+       [dbo].[Country] (Table)
+       [dbo].[TaxBracketLine] (Table)
+       [dbo].[TaxCalculation] (Table)
+     Create
+       [dbo].[TaxRegime] (Table)
+       [dbo].[FK_TaxBracket_Country] (Foreign Key)
+       [dbo].[FK_TaxCalculation_Country] (Foreign Key)
+       [dbo].[FK_TaxRate_Country] (Foreign Key)
+       [dbo].[FK_Country_TaxRegime] (Foreign Key)
+       [dbo].[FK_TaxBracketLine_Country] (Foreign Key)
+
+** Supporting actions
+
+The column [dbo].[Country].[PkCountryId] is being dropped, data loss could occur.
+The column [dbo].[Country].[TaxRegime] is being dropped, data loss could occur.
+The column [dbo].[Country].[TaxRegimeId] on table [dbo].[Country] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[TaxBracketLine].[FkTaxBracketId] is being dropped, data loss could occur.
+The column [dbo].[TaxBracketLine].[CountryId] on table [dbo].[TaxBracketLine] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[TaxCalculation].[FkCountryId] is being dropped, data loss could occur.
+The column [dbo].[TaxCalculation].[PkTaxCalculationId] is being dropped, data loss could occur.
+The column [dbo].[TaxCalculation].[CountryId] on table [dbo].[TaxCalculation] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+

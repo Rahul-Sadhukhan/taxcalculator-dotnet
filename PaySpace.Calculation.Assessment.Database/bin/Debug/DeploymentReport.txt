@@ -1,0 +1,23 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Country] (Table)
+       [dbo].[TaxBracket] (Table)
+       [dbo].[TaxBracketLine] (Table)
+       [dbo].[TaxCalculation] (Table)
+       [dbo].[TaxRate] (Table)
+       [dbo].[FK_TaxBracket_Country] (Foreign Key)
+       [dbo].[FK_TaxBracketLine_TaxBracket] (Foreign Key)
+       [dbo].[FK_TaxCalculation_Country] (Foreign Key)
+       [dbo].[FK_TaxRate_Country] (Foreign Key)
+
+** Supporting actions

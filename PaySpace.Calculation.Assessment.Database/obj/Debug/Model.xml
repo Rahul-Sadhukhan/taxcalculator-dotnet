@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="130" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="PaySpace.Calculation.Assessment.Database.dll" />
+			<Metadata Name="FileName" Value="C:\JAVA\CALC-ASSIGNMENT\PAYSPACE.CALCULATION.ASSESSMENT.DATABASE\OBJ\DEBUG\PAYSPACE.CALCULATION.ASSESSMENT.DATABASE.DLL" />
+			<Metadata Name="AssemblyName" Value="PaySpace.Calculation.Assessment.Database" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Java\calc-assignment\PaySpace.Calculation.Assessment.Database\obj\Debug\PaySpace.Calculation.Assessment.Database.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[TaxRegime].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[TaxRegime]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[TaxCalculation].[TaxCalculationId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[TaxCalculation]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Country].[CountryId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Country]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[TaxBracketLine].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Country]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Country].[CountryId]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="5" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Country].[Description]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Country].[Code]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="3" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Country].[TaxRegimeId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Country_TaxRegime]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Country].[TaxRegimeId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Country]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[TaxRegime].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[TaxRegime]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="7" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_TaxBracketLine_Country]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[CountryId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Country].[CountryId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Country]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_TaxCalculation_Country]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[CountryId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[TaxCalculation]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Country].[CountryId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Country]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[TaxBracketLine]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TaxBracketLine].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="6" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TaxBracketLine].[CountryId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TaxBracketLine].[OrderNumber]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TaxBracketLine].[LowerLimit]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="12" />
+									<Property Name="Precision" Value="31" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TaxBracketLine].[UpperLimit]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="12" />
+									<Property Name="Precision" Value="31" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TaxBracketLine].[Rate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="12" />
+									<Property Name="Precision" Value="31" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="8" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[TaxCalculation]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TaxCalculation].[TaxCalculationId]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="4" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TaxCalculation].[CountryId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TaxCalculation].[Income]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="12" />
+									<Property Name="Precision" Value="31" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TaxCalculation].[CalculatedTax]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="12" />
+									<Property Name="Precision" Value="31" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TaxCalculation].[NetPay]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="12" />
+									<Property Name="Precision" Value="31" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="9" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[TaxRegime]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TaxRegime].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="3" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TaxRegime].[Name]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TaxRegime].[Code]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpdateFlatRateTax]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	DECLARE @TaxRegimeCode varchar(20), @CountryTaxRegimeId INT
+
+	SELECT @CountryTaxRegimeId=TaxRegimeId FROM Country where CountryId = @CountryId;
+	SELECT @TaxRegimeCode= Code FROM TaxRegime where Id = @CountryTaxRegimeId
+
+	IF(@TaxRegimeCode='FLAT')
+	BEGIN
+		IF(@Income=0)
+		BEGIN
+			DECLARE @FlatRateAmount DECIMAL(18, 2);
+			DECLARE @FlatMinIncome DECIMAL(18, 2);
+
+			-- Get flat rate values for the country
+			SELECT @FlatRateAmount = Rate, @FlatMinIncome = LowerLimit
+			FROM TaxBracketLine
+			WHERE CountryId = @CountryId;
+
+			-- Update tax using flat rate for all incomes in the specified country
+			UPDATE TaxCalculation
+			SET CalculatedTax = CASE WHEN Income > @FlatMinIncome THEN @FlatRateAmount ELSE 0 END,
+			    NetPay = Income-CalculatedTax
+			WHERE CountryId = @CountryId;
+		END
+		IF(@Income>0)
+		BEGIN
+			DECLARE @TDS FLOAT
+			SELECT @TDS=CASE 
+							WHEN LowerLimit < @Income THEN Rate
+							ELSE 0
+						END
+			FROM TaxBracketLine WHERE CountryId = @CountryId;
+
+			INSERT INTO TaxCalculation(CountryId, Income, CalculatedTax, NetPay)
+			values
+			(@CountryId, @Income, @TDS, @Income-@TDS)
+		END
+	END
+	ELSE
+	BEGIN
+		SET @ValidationMessage='Please correct your countrys tax regime!'
+	END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[decimal]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[decimal]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[float]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Country]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Country].[TaxRegimeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Country].[CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateFlatRateTax].[@CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxRegime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxRegime].[Code]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxRegime].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateFlatRateTax].[@Income]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[Rate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[LowerLimit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[CalculatedTax]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[Income]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[NetPay]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateFlatRateTax].[@ValidationMessage]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateFlatRateTax].[@CountryId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateFlatRateTax].[@Income]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Precision" Value="53" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[float]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateFlatRateTax].[@ValidationMessage]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="1000" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1547" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateFlatRateTax] &#xD;&#xA;&#x9;@CountryId INT,&#xD;&#xA;&#x9;@Income FLOAT,&#xD;&#xA;&#x9;@ValidationMessage varchar(1000) OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpdatePercentageTax]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	DECLARE @TaxRegimeCode varchar(20), @CountryTaxRegimeId INT
+
+	SELECT @CountryTaxRegimeId=TaxRegimeId FROM Country where CountryId = @CountryId;
+	SELECT @TaxRegimeCode= Code FROM TaxRegime where Id = @CountryTaxRegimeId
+
+	IF(@TaxRegimeCode='PERC')
+	BEGIN
+		IF(@Income=0)
+		BEGIN
+			DECLARE @RateAmount DECIMAL(18, 2);
+			DECLARE @MinIncome DECIMAL(18, 2);
+			DECLARE @MaxIncome DECIMAL(18, 2);
+
+			SELECT @RateAmount = Rate, @MinIncome = LowerLimit, @MaxIncome=UpperLimit
+			FROM TaxBracketLine
+			WHERE CountryId = @CountryId;
+
+			UPDATE TaxCalculation
+			SET CalculatedTax = CASE WHEN @MinIncome = -1 AND @MaxIncome = -1 THEN Income * 0.30 ELSE 0 END,
+			NetPay=Income-CalculatedTax
+			WHERE CountryId = @CountryId;
+		END
+		IF(@Income>0)
+		BEGIN
+			DECLARE @TDS FLOAT
+			SELECT @TDS=CASE 
+							WHEN LowerLimit =-1 AND UpperLimit=-1 THEN @Income * 0.30
+							ELSE 0
+						END
+			FROM TaxBracketLine WHERE CountryId = @CountryId;
+
+			INSERT INTO TaxCalculation(CountryId, Income, CalculatedTax, NetPay)
+			values
+			(@CountryId, @Income, @TDS, @Income-@TDS)
+		END
+	END
+	ELSE
+	BEGIN
+		SET @ValidationMessage='Please correct your countrys tax regime!'
+	END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[decimal]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[decimal]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[decimal]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[float]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Country]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Country].[TaxRegimeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Country].[CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdatePercentageTax].[@CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxRegime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxRegime].[Code]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxRegime].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdatePercentageTax].[@Income]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[Rate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[LowerLimit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[UpperLimit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[CalculatedTax]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[Income]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[NetPay]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdatePercentageTax].[@ValidationMessage]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdatePercentageTax].[@CountryId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdatePercentageTax].[@Income]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Precision" Value="53" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[float]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdatePercentageTax].[@ValidationMessage]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="1000" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1455" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdatePercentageTax] &#xD;&#xA;&#x9;@CountryId INT,&#xD;&#xA;&#x9;@Income FLOAT,&#xD;&#xA;&#x9;@ValidationMessage varchar(1000) OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpdateProgressiveTax]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	DECLARE @TaxRegimeCode varchar(20), @CountryTaxRegimeId INT
+
+	SELECT @CountryTaxRegimeId=TaxRegimeId FROM Country where CountryId = @CountryId;
+	SELECT @TaxRegimeCode= Code FROM TaxRegime where Id = @CountryTaxRegimeId
+
+	IF(@TaxRegimeCode='PROG')
+	BEGIN
+		IF(@Income=0)
+		BEGIN
+			WITH TC AS (
+				SELECT 
+					t.CountryId,
+					SUM(
+						CASE 
+							WHEN i.Income > t.LowerLimit THEN 
+								(CASE 
+									WHEN t.UpperLimit IS NULL OR i.Income < t.UpperLimit 
+									THEN i.Income 
+									ELSE t.UpperLimit 
+								END - t.LowerLimit) * (t.Rate / 100)
+							ELSE 0 
+						END
+					) AS TotalTax
+				FROM 
+					TaxBracketLine t
+				JOIN 
+					TaxCalculation i ON i.CountryId = t.CountryId
+				WHERE 
+					i.Income > t.LowerLimit
+				GROUP BY 
+					t.CountryId
+			)
+
+			UPDATE i
+			SET i.CalculatedTax = tc.TotalTax,
+			i.NetPay = i.Income-i.CalculatedTax
+			FROM TaxCalculation i
+			JOIN TC tc ON i.CountryId = tc.CountryId
+			WHERE i.CountryId = @CountryId;
+
+		END
+		IF(@Income>0)
+		BEGIN
+			DECLARE @TDS FLOAT
+			SELECT @TDS=SUM(
+						CASE 
+							WHEN @Income > t.LowerLimit THEN 
+								(CASE 
+									WHEN t.UpperLimit IS NULL OR @Income < t.UpperLimit THEN @Income
+									ELSE t.UpperLimit 
+								END - t.LowerLimit) * (t.Rate / 100)
+							ELSE 0 
+						END
+						)
+			FROM TaxBracketLine t
+			WHERE t.CountryId = @CountryId AND @Income > t.LowerLimit
+
+			INSERT INTO TaxCalculation(CountryId, Income, CalculatedTax, NetPay)
+			values
+			(@CountryId, @Income, @TDS, @Income-@TDS)
+		END
+	END
+	ELSE
+	BEGIN
+		SET @ValidationMessage='Please correct your countrys tax regime!'
+	END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[float]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Country]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Country].[TaxRegimeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Country].[CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateProgressiveTax].[@CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxRegime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxRegime].[Code]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxRegime].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateProgressiveTax].[@Income]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[Income]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[LowerLimit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[UpperLimit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[Rate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[CalculatedTax]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[NetPay]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[Income]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[LowerLimit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[UpperLimit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[Rate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxBracketLine].[CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[CountryId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[Income]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[CalculatedTax]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TaxCalculation].[NetPay]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateProgressiveTax].[@ValidationMessage]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DynamicObjects">
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dbo].[UpdateProgressiveTax].[CTE1].[TC]">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[UpdateProgressiveTax].[CTE1].[TC].[CountryId]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[TaxBracketLine].[CountryId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[UpdateProgressiveTax].[CTE1].[TC].[TotalTax]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateProgressiveTax].[@CountryId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateProgressiveTax].[@Income]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Precision" Value="53" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[float]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateProgressiveTax].[@ValidationMessage]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="1000" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1926" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateProgressiveTax]&#xD;&#xA;&#x9;@CountryId INT,&#xD;&#xA;&#x9;@Income FLOAT,&#xD;&#xA;&#x9;@ValidationMessage varchar(1000) OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+	</Model>
+</DataSchemaModel>

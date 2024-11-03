@@ -1,0 +1,10 @@
+C:\Java\calc-assignment\PaySpace.Calculation.Assessment.Database\bin\Debug\PaySpace.Calculation.Assessment.Database.dacpac
+C:\Java\calc-assignment\PaySpace.Calculation.Assessment.Database\bin\Debug\PaySpace.Calculation.Assessment.Database.dll
+C:\Java\calc-assignment\PaySpace.Calculation.Assessment.Database\bin\Debug\PaySpace.Calculation.Assessment.Database.pdb
+C:\Java\calc-assignment\PaySpace.Calculation.Assessment.Database\obj\Debug\PaySpace.Calculation.Assessment.Database.sqlproj.AssemblyReference.cache
+C:\Java\calc-assignment\PaySpace.Calculation.Assessment.Database\obj\Debug\PaySpace.Calculation.Assessment.Database.dll
+C:\Java\calc-assignment\PaySpace.Calculation.Assessment.Database\obj\Debug\PaySpace.Calculation.Assessment.Database.pdb
+C:\Java\calc-assignment\PaySpace.Calculation.Assessment.Database\obj\Debug\Model.xml
+C:\Java\calc-assignment\PaySpace.Calculation.Assessment.Database\obj\Debug\refactor.xml
+C:\Java\calc-assignment\PaySpace.Calculation.Assessment.Database\obj\Debug\postdeploy.sql
+C:\Java\calc-assignment\PaySpace.Calculation.Assessment.Database\obj\Debug\predeploy.sql
